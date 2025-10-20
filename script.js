@@ -51,15 +51,21 @@ toggles.forEach(function (toggle) {
 
 function swiperAnimation() {
     var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 0,
-  centeredSlides: false, 
-});
+        slidesPerView: 3,
+        spaceBetween: 0,
+        centeredSlides: false, 
+    });
+}
+
+function load_screen() {
+    let loader = document.getElementById("loader")
+
+setTimeout( function() {
+    loader.style.top = "-100%"
+}, 4100)
 }
 
 swiperAnimation()
-
 page3animation()
 page4()
-
-// responsive
+load_screen()

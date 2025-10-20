@@ -1291,6 +1291,100 @@ footer .gooey3 {
   from { transform: translate(-70%, 5%) skew(0deg); }
   to   { transform: translate(10%, -80%) skew(-15deg); }
 }
+}
 
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  z-index: 99999;
+  top:0;
+  transition: all ease 0.4s;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
 
+#loader h1 {
+  color: transparent;
+  font-size: 4vw;
+  position: absolute;
+  background: linear-gradient(orange , orangered);
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+
+#loader h1:nth-child(1) {
+  animation: load 1s linear 1s;
+}
+#loader h1:nth-child(2) {
+  animation: load 1s linear 2s;
+}
+#loader h1:nth-child(3) {
+  animation: load 1s linear 3s;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width:600px) {
+  #loader {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  z-index: 99999;
+  top:0;
+  transition: all ease 0.4s;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+#loader h1 {
+  color: transparent;
+  font-size: 10vw;
+  position: absolute;
+  background: linear-gradient(orange , orangered);
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+
+#loader h1:nth-child(1) {
+  animation: load 1s linear 1s;
+}
+#loader h1:nth-child(2) {
+  animation: load 1s linear 2s;
+}
+#loader h1:nth-child(3) {
+  animation: load 1s linear 3s;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 }
